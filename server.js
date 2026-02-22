@@ -17,10 +17,17 @@ bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
   if (err) {
     console.error(err);
   } else {
-    console.log('Tu hash generado es: ' + hash);
+    console.log("Hash generado:", hash);
     // Aquí es donde normalmente guardarías el 'hash' en tu base de datos
-  }
-});
+ bcrypt.compare(myPlaintextPassword, hash, (err, res) => {
+      // res será 'true' si coinciden, 'false' si no
+      if (err) {
+        console.error(err);
+      } else {
+        console.log('Resultado de la comparación:', res);
+      }
+    });
+  
 //START_ASYNC -do not remove notes, place code between correct pair of notes.
 
 
