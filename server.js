@@ -27,7 +27,8 @@ bcrypt.hash(myPlaintextPassword, saltRounds, (err, hash) => {
         console.log('Resultado de la comparación:', res);
       }
     });
-  
+ } 
+}); 
 //START_ASYNC -do not remove notes, place code between correct pair of notes.
 
 
